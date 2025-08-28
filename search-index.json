@@ -3,14 +3,14 @@
     "title": "Example post",
     "description": "This example was generated...",
     "date": "31 December 2019",
-    "url": "/example-post/",
+    "url": "https://defra-design.github.io/example-post/",
     "tokens": "this example standard design history post begins with preamble about ends list screenshots some real examples are apply teacher training reasons withdrawing application manage applications deferring find postgraduate snapshot service page generated after were saved app images directory using following command node scripts generate js read guide how use script can print preview ll see that each screenshot given its own"
   },
   {
     "title": "Release 3.4",
     "description": "Flood map for planning at time of release 3.4 august 2035",
     "date": "28 August 2025",
-    "url": "/release-3-4/",
+    "url": "https://defra-design.github.io/release-3-4/",
     "tokens": "release featured map load information panel with how query help prompt rivers seas climate change replaced by flood zones data areas were added low confidence black white base various content updates explaining changes"
   }
 ]
