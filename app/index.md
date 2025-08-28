@@ -1,8 +1,8 @@
 ---
 homepage: true
 layout: product
-title: A design history for your GOV.UK service
-description: A permanent record of how your service has developed over time.
+title: Flood map for planning
+description: A service providing flood risk information for planning purposes.
 pagination:
   data: collections.all
   reverse: true

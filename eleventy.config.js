@@ -5,10 +5,28 @@ export default function (eleventyConfig) {
   // https://x-govuk.github.io/govuk-eleventy-plugin/options/
   eleventyConfig.addPlugin(govukEleventyPlugin, {
     header: {
-      productName: 'Design History',
+      productName: 'Flood map for planning design history',
       search: {
         indexPath: '/search-index.json',
         sitemapPath: '/sitemap'
+      }
+    },
+    footer: {
+      meta: {
+        items: [
+          {
+            href: '/sitemap',
+            text: 'Sitemap'
+          },
+          {
+            href: '/tags',
+            text: 'Tagged content'
+          },
+          {
+            href: 'https://github.com/your-org/your-repo',
+            text: 'GitHub'
+          }
+        ]
       }
     },
     headingPermalinks: true,
