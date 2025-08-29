@@ -35,6 +35,6 @@ node scripts/generate.js example-post
 
 [Read the guide on how to use this script](https://x-govuk.github.io/govuk-design-history/generate-a-page-of-screenshots/#generate-a-page-of-screenshots-from-a-folder-of-images)
 
-## You can print this page
+## You can print this page test
 
 If you print preview a design history post you’ll see that each screenshot is given its own page.
