@@ -15,6 +15,10 @@ export default function (eleventyConfig) {
       meta: {
         items: [
           {
+            href: 'https://flood-map-for-planning-proto.herokuapp.com/',
+            text: 'Prototype herokuapp'
+          },
+          {
             href: '/sitemap',
             text: 'Sitemap'
           },
@@ -23,8 +27,12 @@ export default function (eleventyConfig) {
             text: 'Tagged content'
           },
           {
-            href: 'https://github.com/your-org/your-repo',
-            text: 'GitHub'
+            href: 'https://github.com/defra-design/flood-map-for-planning-design-history',
+            text: 'Deign history GitHub'
+          },
+          {
+            href: 'https://github.com/defra-design/flood-map-for-planning-2',
+            text: 'Prototype GitHub'
           }
         ]
       }
