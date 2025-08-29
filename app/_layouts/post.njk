@@ -17,14 +17,14 @@
 
     <div class="govuk-grid-column-two-thirds-from-desktop">
       {% call appProseScope() %}
-        {% if image -%}
+        {% if image %}
           <figure>
-            <img src="{{ image.src }}" alt="{{ image.alt }}">
-            {% if image.caption -%}
-            <figcaption>{{ image.caption }}</figcaption>
-            {% endif -%}
+            <img src="{{ image.src | url }}" alt="{{ image.alt }}">
+            {% if image.caption %}
+              <figcaption>{{ image.caption }}</figcaption>
+            {% endif %}
           </figure>
-        {%- endif %}
+        {% endif %}
 
         {{ content }}
 

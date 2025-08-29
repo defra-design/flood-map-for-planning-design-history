@@ -1,51 +1,39 @@
 import { govukEleventyPlugin } from '@x-govuk/govuk-eleventy-plugin'
 
-export default function (eleventyConfig) {
-  // Options to customise the appearance of your design history
-  // https://x-govuk.github.io/govuk-eleventy-plugin/options/
+export default function(eleventyConfig) {
+  const isProd = process.env.GITHUB_ACTIONS
+  const pathPrefix = isProd ? '/flood-map-for-planning-design-history/' : '/'
+
+  // GOV.UK plugin
   eleventyConfig.addPlugin(govukEleventyPlugin, {
     header: {
       productName: 'Flood map for planning design history',
       search: {
-        indexPath: '/search-index.json',
-        sitemapPath: '/sitemap'
+        indexPath: `${pathPrefix}search-index.json`,
+        sitemapPath: `${pathPrefix}sitemap/`
       }
     },
     footer: {
       meta: {
         items: [
-          {
-            href: '/sitemap',
-            text: 'Sitemap'
-          },
-          {
-            href: '/tags',
-            text: 'Tagged content'
-          },
-          {
-            href: 'https://github.com/your-org/your-repo',
-            text: 'GitHub'
-          }
+          { href: 'sitemap/', text: 'Sitemap' },
+          { href: 'tags/', text: 'Tagged content' },
+          { href: 'https://github.com/defra-design/flood-map-for-planning-design-history', text: 'GitHub' }
         ]
       }
     },
     headingPermalinks: true,
-    stylesheets: [
-      '/styles/application.css'
-    ],
+    stylesheets: [`${pathPrefix}styles/application.css`],
     templates: {
       searchIndex: true,
       tags: true
     },
-    url:
-      process.env.GITHUB_ACTIONS &&
-      'https://x-govuk.github.io/govuk-design-history-template/'
+    url: `https://defra-design.github.io/flood-map-for-planning-design-history/`
   })
 
-  // Passthrough
+  // Passthrough copy
   eleventyConfig.addPassthroughCopy({ './app/images': '.' })
 
-  // Config
   return {
     dataTemplateEngine: 'njk',
     htmlTemplateEngine: 'njk',
@@ -53,8 +41,9 @@ export default function (eleventyConfig) {
     dir: {
       input: 'app',
       layouts: '_layouts',
-      includes: '_components'
+      includes: '_components',
+      output: '_site'
     },
-    pathPrefix: process.env.GITHUB_ACTIONS && '/govuk-design-history-template/'
+    pathPrefix
   }
 }
