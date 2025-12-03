@@ -63,7 +63,7 @@ The prototype changes for usability testing include:
 - Menu structure changed to accommodate new datasets​​
 - Information panel​ updated to reflect new datasets
 - Results page updated to reflect new datasets
-- How to use this data page' updated to reflect new datasets​
+- How to use this data page updated to reflect new datasets​
 - Layer opacity slider added​​
 - Map help page added​​​
 
